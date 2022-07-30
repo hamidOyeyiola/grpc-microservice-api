@@ -18,7 +18,7 @@ import (
 
 func main() {
 	r := mux.NewRouter()
-	signUp := controller.NewMySQLCRUDController("hamid:kolajoke2055@tcp(localhost:3306)/registrationandlogin")
+	signUp := controller.NewMySQLCRUDController("hamid:@tcp(localhost:3306)/registrationandlogin")
 	api.MakeCreaterAPI(r, signUp, "/api/signup", "id", "",
 		model.User{}, nil)
 	signIn := controller.NewMySQLCRUDController("hamid:@tcp(localhost:3306)/registrationandlogin")
